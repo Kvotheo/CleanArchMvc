@@ -39,7 +39,7 @@ namespace CleanArchMvc.Domain.Entitites
 
             DomainExceptionValidation.When(price < 0, "Invalid price value");
             DomainExceptionValidation.When(stock < 0, "Invalid stock value");
-            DomainExceptionValidation.When(string.IsNullOrEmpty(image), "Invalid image. Image is required");
+            DomainExceptionValidation.When(image?.Length > 250, "Nome muito grande");
 
             Name = name;
             Description = description;
