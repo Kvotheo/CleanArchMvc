@@ -17,7 +17,7 @@ namespace CleanArchMvc.Domain.Interfaces
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<Product> GetProductCategoryAsync(int? id)
+        Task<Product> GetProductCategoryAsync(int? id);
 
         /// <summary>
         /// Pega os produtos pelo ID
