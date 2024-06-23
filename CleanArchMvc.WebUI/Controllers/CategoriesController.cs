@@ -42,7 +42,7 @@ namespace CleanArchMvc.WebUI.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
-            var categoryDto = await _categoryService.GetById(id);
+            var categoryDto = await _categoryService.GetCategoryById(id);
             if (categoryDto == null) return NotFound();
             return View(categoryDto);
         }
@@ -71,7 +71,7 @@ namespace CleanArchMvc.WebUI.Controllers
             if (id == null)
                 return NotFound();
 
-            var categoryDto = await _categoryService.GetById(id);
+            var categoryDto = await _categoryService.GetCategoryById(id);
 
             if (categoryDto == null) return NotFound();
 
@@ -90,7 +90,7 @@ namespace CleanArchMvc.WebUI.Controllers
             if (id == null)
                 return NotFound();
 
-            var categoryDto = await _categoryService.GetById(id);
+            var categoryDto = await _categoryService.GetCategoryById(id);
 
             if (categoryDto == null)
                 return NotFound();

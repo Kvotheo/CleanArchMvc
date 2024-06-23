@@ -48,9 +48,10 @@ namespace CleanArchMvc.Application.Services
             await _categoryRepository.RemoveAsync(categoryEntity);
         }
 
-        public Task<CategoryDTO> GetCategoryById(int? id)
+        public async Task<CategoryDTO> GetCategoryById(int? id)
         {
-            throw new System.NotImplementedException();
+            var categoryEntity = await _categoryRepository.GetByIdAsync(id);
+            return _mapper.Map<CategoryDTO>(categoryEntity);
         }
     }
 }
